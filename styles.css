@@ -472,6 +472,20 @@ body {
     transform: scale(1.02);
 }
 
+/* Make headings inside process cards non-bold and more subtle */
+.process-card h4 {
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 12px 0 8px;
+    color: var(--muted);
+}
+
+.process-card p,
+.process-card li {
+    font-weight: 400;
+    color: var(--muted);
+}
+
 /* Precautions Section */
 .precautions-section {
     background: linear-gradient(to bottom, #f9fafb, white);
