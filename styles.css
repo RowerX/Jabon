@@ -409,6 +409,31 @@ body {
     line-height: 1.8;
 }
 
+/* Proceso de extracción - estilos consistentes con extractos */
+.process-section {
+    background: #f9fafb;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 32px;
+    margin-top: 24px;
+}
+
+.process-card {
+    background: linear-gradient(135deg, #f9fafb, white);
+    border: 2px solid #f3f4f6;
+    border-radius: 24px;
+    padding: 32px;
+    transition: all 0.3s ease;
+}
+
+.process-card:hover {
+    border-color: var(--accent-3);
+    transform: scale(1.02);
+}
+
 /* Precautions Section */
 .precautions-section {
     background: linear-gradient(to bottom, #f9fafb, white);
