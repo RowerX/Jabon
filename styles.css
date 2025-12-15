@@ -722,6 +722,7 @@ body {
     .collaborators-grid,
     .ingredients-grid,
     .extracts-grid,
+    .process-grid,
     .reasons-grid,
     .contact-grid {
         grid-template-columns: 1fr;
@@ -760,6 +761,7 @@ body {
     .collaborator-card,
     .ingredient-card,
     .extract-card,
+    .process-card,
     .reason-card {
         padding: 24px;
     }
