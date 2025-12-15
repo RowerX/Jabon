@@ -4,11 +4,25 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --accent-1: #B2BDC7; /* light */
+    --accent-2: #7F91A2;
+    --accent-3: #4C657C;
+    --accent-4: #1C3C59;
+    --accent-5: #002345; /* deep */
+    --primary-gradient: linear-gradient(to right, #B2BDC7 0%, #B2BDC7 12%, #7F91A2 23%, #7F91A2 35%, #4C657C 45%, #4C657C 55%, #1C3C59 68%, #1C3C59 82%, #002345 100%);
+    --primary-gradient-vertical: linear-gradient(to bottom, #B2BDC7, #002345);
+    --accent-1-opaque: rgba(178,189,199,0.12);
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
     line-height: 1.6;
-    color: #1f2937;
-    background: white;
+    color: var(--text);
+    background: var(--bg);
     overflow-x: hidden;
 }
 
@@ -55,7 +69,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 80px 24px;
-    background: linear-gradient(to bottom, #f9fafb, white);
+    background: linear-gradient(to bottom, var(--accent-1), var(--bg));
 }
 
 .hero-content {
@@ -68,7 +82,7 @@ body {
     font-size: clamp(4rem, 10vw, 7rem);
     font-weight: 700;
     margin-bottom: 24px;
-    background: linear-gradient(to right, #059669, #14b8a6);
+    background: var(--primary-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -77,7 +91,7 @@ body {
 
 .hero-subtitle {
     font-size: clamp(1.5rem, 3vw, 2rem);
-    color: #6b7280;
+    color: var(--muted);
     margin-bottom: 48px;
     font-weight: 400;
 }
@@ -131,7 +145,7 @@ body {
 
 .section-description {
     font-size: 1.25rem;
-    color: #6b7280;
+    color: var(--muted);
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.8;
@@ -157,7 +171,7 @@ body {
 }
 
 .collaborator-card {
-    background: #f9fafb;
+    background: var(--accent-1);
     border-radius: 24px;
     padding: 32px;
     text-align: center;
@@ -173,7 +187,7 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #34d399, #14b8a6);
+    background: linear-gradient(135deg, var(--accent-3), var(--accent-2));
     margin: 0 auto 24px;
 }
 
@@ -184,13 +198,13 @@ body {
 }
 
 .collaborator-role {
-    color: #059669;
+    color: var(--accent-3);
     font-weight: 500;
     margin-bottom: 12px;
 }
 
 .collaborator-specialty {
-    color: #6b7280;
+    color: var(--muted);
     font-size: 0.875rem;
 }
 
@@ -221,13 +235,13 @@ body {
 }
 
 .feature-icon.green {
-    background: #d1fae5;
-    color: #059669;
+    background: var(--accent-1-opaque);
+    color: var(--accent-5);
 }
 
 .feature-icon.teal {
-    background: #ccfbf1;
-    color: #0d9488;
+    background: rgba(127,145,162,0.08);
+    color: var(--accent-3);
 }
 
 .feature-title {
@@ -237,7 +251,7 @@ body {
 }
 
 .feature-description {
-    color: #6b7280;
+    color: var(--muted);
     line-height: 1.8;
 }
 
@@ -270,8 +284,8 @@ body {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #d1fae5;
-    color: #059669;
+    background: var(--accent-1);
+    color: var(--accent-3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -292,7 +306,7 @@ body {
 }
 
 .ingredient-purpose {
-    color: #6b7280;
+    color: var(--muted);
     line-height: 1.7;
 }
 
@@ -302,7 +316,7 @@ body {
 }
 
 .farmacopea-box {
-    background: linear-gradient(135deg, #d1fae5, #ccfbf1);
+    background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
     border-radius: 24px;
     padding: 48px;
     max-width: 1000px;
@@ -318,7 +332,7 @@ body {
 }
 
 .farmacopea-header svg {
-    color: #059669;
+    color: var(--accent-3);
 }
 
 .farmacopea-header h3 {
@@ -347,7 +361,7 @@ body {
 }
 
 .extract-card:hover {
-    border-color: #86efac;
+    border-color: var(--accent-3);
     transform: scale(1.02);
 }
 
@@ -362,7 +376,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 16px;
-    background: linear-gradient(135deg, #34d399, #14b8a6);
+    background: linear-gradient(135deg, var(--accent-3), var(--accent-2));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -386,12 +400,12 @@ body {
 
 .extract-plant {
     font-size: 0.875rem;
-    color: #6b7280;
+    color: var(--muted);
     font-style: italic;
 }
 
 .extract-benefits {
-    color: #6b7280;
+    color: var(--muted);
     line-height: 1.8;
 }
 
@@ -455,7 +469,7 @@ body {
 .precaution-note {
     margin-top: 40px;
     padding: 24px;
-    background: linear-gradient(to right, #d1fae5, #ccfbf1);
+    background: linear-gradient(to right, var(--accent-1), var(--accent-2));
     border-radius: 16px;
     text-align: center;
 }
@@ -470,7 +484,7 @@ body {
 
 /* Why Buy Section */
 .why-buy-section {
-    background: linear-gradient(to bottom, white, #d1fae5);
+    background: linear-gradient(to bottom, var(--bg), var(--accent-1));
 }
 
 .reasons-grid {
@@ -495,7 +509,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 16px;
-    background: linear-gradient(135deg, #34d399, #14b8a6);
+    background: linear-gradient(135deg, var(--accent-3), var(--accent-2));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -513,13 +527,13 @@ body {
 }
 
 .reason-description {
-    color: #6b7280;
+    color: var(--muted);
     line-height: 1.8;
 }
 
 .guarantee-box {
     margin-top: 80px;
-    background: linear-gradient(to right, #059669, #14b8a6);
+    background: var(--primary-gradient);
     border-radius: 24px;
     padding: 48px;
     text-align: center;
@@ -541,7 +555,7 @@ body {
 
 /* Contact Section */
 .contact-section {
-    background: linear-gradient(to bottom, #d1fae5, #1f2937);
+    background: linear-gradient(to bottom, var(--accent-1), var(--text));
     color: white;
 }
 
@@ -558,7 +572,7 @@ body {
     padding: 32px;
     text-align: center;
     transition: all 0.3s ease;
-    color: #1f2937;
+    color: var(--text);
 }
 
 .contact-card:hover {
@@ -570,8 +584,8 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background: #d1fae5;
-    color: #059669;
+    background: var(--accent-1);
+    color: var(--accent-3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -579,36 +593,36 @@ body {
 }
 
 .contact-icon.teal {
-    background: #ccfbf1;
-    color: #0d9488;
+    background: rgba(127,145,162,0.06);
+    color: var(--accent-3);
 }
 
 .contact-title {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 16px;
-    color: #1f2937;
+    color: var(--text);
 }
 
 .contact-link {
-    color: #059669;
+    color: var(--accent-3);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .contact-link:hover {
-    color: #047857;
+    color: var(--accent-4);
 }
 
 .contact-info {
-    color: #6b7280;
+    color: var(--muted);
     font-size: 0.875rem;
     margin-top: 8px;
 }
 
 .contact-address {
-    color: #6b7280;
+    color: var(--muted);
     line-height: 1.8;
 }
 
@@ -645,7 +659,7 @@ body {
 }
 
 .social-link:hover {
-    background: #059669;
+    background: var(--accent-3);
     color: white;
     transform: scale(1.1);
 }
@@ -662,7 +676,7 @@ body {
 }
 
 .footer-subtext {
-    color: #6b7280;
+    color: var(--muted);
     font-size: 0.875rem;
 }
 
