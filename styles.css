@@ -417,6 +417,36 @@ body {
     line-height: 1.8;
 }
 
+/* Reference styling inside process/extract cards */
+.reference {
+    margin-top: 14px;
+    font-size: 0.9rem;
+    color: #4b5563; /* slightly darker muted */
+    background: rgba(127,145,162,0.04);
+    padding: 10px 14px;
+    border-radius: 10px;
+    display: block;
+    max-width: 100%;
+}
+
+.reference .reference-text {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+    .reference {
+        font-size: 0.82rem;
+        padding: 8px 10px;
+    }
+    .reference .reference-text {
+        font-size: 0.78rem;
+    }
+}
+
 /* Proceso de extracción - estilos consistentes con extractos */
 .process-section {
     background: #f9fafb;
